@@ -1,0 +1,8 @@
+i) create conda environment and activate in the desired directory
+
+ii) install conda packages:
+    - conda install pip python=3.7.0 numpy pandas pytorch nltk tensorboard cudatoolkit matplotlib tqdm
+
+iii) install pip packages:
+
+    - pip install torchvision pillow
