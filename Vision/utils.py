@@ -4,6 +4,10 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from collections import Counter
 
+
+######################################################
+################## OBJECT DETECTION ##################
+######################################################
 def intersection_over_union(boxes_preds, boxes_labels, box_format="midpoint"):
     """
     Calculates intersection over union
@@ -341,3 +345,8 @@ def load_checkpoint(checkpoint, model, optimizer):
     print("=> Loading checkpoint")
     model.load_state_dict(checkpoint["state_dict"])
     optimizer.load_state_dict(checkpoint["optimizer"])
+
+
+######################################################
+################## OBJECT DETECTION (end) ##################
+######################################################
