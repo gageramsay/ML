@@ -5,7 +5,9 @@ from utils import intersection_over_union
 
 
 
-
+##############################
+########## OBJECT DETECTION ##########
+########################################
 
 # Y = [class1, class2, ... , class 20, Pc1, Bx1, By1, Bw1, Bh1, Pc2, Bx2, By2, Bw2, Bh2] 
 
@@ -54,3 +56,7 @@ class YOLOLoss(nn.Module):
         loss = (self.lambda_coord*box_loss+object_loss+self.lambda_noobj*no_object_loss+class_loss)
 
         return loss
+
+##############################
+########## OBJECT DETECTION (end) ##########
+########################################

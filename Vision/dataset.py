@@ -3,7 +3,9 @@ import os
 import pandas as pd
 from PIL import Image
 
-
+##############################
+########## OBJECT DETECTION ##########
+########################################
 class YOLODataset(torch.utils.data.Dataset):
     def __init__(self, csv_file, img_dir, label_dir, S=7, B=2, C=20, transform=None):
         super(YOLODataset, self).__init__()
@@ -47,3 +49,7 @@ class YOLODataset(torch.utils.data.Dataset):
                     label_matrix[i, j, class_label] = 1
 
                 return image, label_matrix #(X, Y)
+
+##############################
+########## OBJECT DETECTION (end) ##########
+########################################
