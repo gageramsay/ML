@@ -350,3 +350,25 @@ def load_checkpoint(checkpoint, model, optimizer):
 ######################################################
 ################## OBJECT DETECTION (end) ##################
 ######################################################
+
+
+
+##############################
+########## CLASSIFICATION ##########
+########################################
+
+def layer_output_size(W, kernel_size, P, S):
+    """
+    Every convolutional layers output size is going to be this 
+    
+    """
+    return (W - kernel_size + 2*P) / (S+1)
+
+
+
+
+
+
+##############################
+########## CLASSIFICATION(end) ##########
+########################################
