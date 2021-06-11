@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from collections import Counter
-
+import pickle
 
 ######################################################
 ################## OBJECT DETECTION ##################
@@ -353,6 +353,10 @@ def load_checkpoint(checkpoint, model, optimizer):
 
 
 
+
+
+
+
 ##############################
 ########## CLASSIFICATION ##########
 ########################################
@@ -365,10 +369,40 @@ def layer_output_size(W, kernel_size, P, S):
     return (W - kernel_size + 2*P) / (S+1)
 
 
+##############################
+########## CLASSIFICATION(end) ##########
+########################################
+
+
+
+
+
 
 
 
 
 ##############################
-########## CLASSIFICATION(end) ##########
+########## Save / LOAD ##########
 ########################################
+
+def dump_pickle(data, filename):
+    """
+    save data to a given filename using pickle
+    """
+    outfile = open(filename, "wb")
+    pickle.dump(data, outfile)
+    outfile.close()
+
+def load_pickle(filename):
+    """
+    load data from a given filename using pickle
+    """
+    infile = open(filename, "rb")
+    data_out = pickle.load(infile)
+    infile.close()
+    return data_out
+
+######################################
+########## Save / LOAD (end) ##########
+########################################
+
