@@ -18,9 +18,17 @@ from utils import (
 )
 
 from loss import YOLOLoss
+from datetime import datetime
+
+current_month = datetime.today().month
+current_day = datetime.today().day
+current_year = datetime.today().year
+save_date = str(current_month)+"_"+str(current_day)+"_"+str(current_year)
 
 seed = 123
 torch.manual_seed(seed)
+
+
 
 ##########################################
 ########### HYPERPARAMETERS ##############
@@ -33,9 +41,9 @@ epochs = 100
 num_workers = 2
 pin_memory = True
 load_model = False
-load_model_file = "overfit.ptf.tar"
-img_dir = "Datasets/Vision/cars/testing_images"
-label_dir = "Datasets/Vision/cars/sample_submission"
+load_model_file = "data/saved/yolov1"+save_date+".pth"
+img_dir = "data/BBlox/BBloxImages"
+label_dir = "data/BBlox/labels"
 img_dim = (448, 448)
 
 class Compose(object):
@@ -78,7 +86,7 @@ def main():
     if load_model:
         load_checkpoint(torch.load(load_model_file), model, optimizer)
 
-    train_dataset = YOLODataset("Dataset/Vision/...", img_dir=img_dir, label_dir=label_dir)
+    train_dataset = YOLODataset("data/BBlox/labels/labels.csv", img_dir=img_dir, label_dir=label_dir)
     # add test dataset here aswell
 
     train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, num_workers=num_workers, pin_memory=pin_memory, shuffle=True, drop_last=True)

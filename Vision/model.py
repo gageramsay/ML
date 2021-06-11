@@ -125,9 +125,7 @@ class LeNet5(nn.Module):
         super(LeNet5, self).__init__()
         self.architecture = [
             # [batch_size, channels, W, W]
-            [32, 1, 28, 28],
-
-
+            [32, 1, 28, 28]
         ]
         self.feature_extractor = nn.Sequential(            
             nn.Conv2d(in_channels=1, out_channels=6, kernel_size=4, stride=1),
