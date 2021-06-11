@@ -213,8 +213,8 @@ def plot_image(image, boxes):
 
     # Create a Rectangle potch
     for box in boxes:
-        box = box[2:]
-        assert len(box) == 4, "Got more values than in x, y, w, h, in a box!"
+        #box = box[2:]
+        #assert len(box) == 4, "Got more values than in x, y, w, h, in a box!"
         upper_left_x = box[0] - box[2] / 2
         upper_left_y = box[1] - box[3] / 2
         rect = patches.Rectangle(
