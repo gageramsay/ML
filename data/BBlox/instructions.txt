@@ -1,0 +1,13 @@
+
+i) predict bounding box for front, top and right vies of the orthographic sketch
+
+Y = [ y_x_view, z_x_view, y_z_view, Pc1, x, y, w, h ]
+
+ii) predict the dimensions and type of object of the parent section
+
+Y = [ x_dim, y_dim, z_dim, radius, sphere, cube, prism, cylinder, Pc1, x, y, w, h]
+
+iii) predict the dimensions, type, location relative to parent, union/intersect/subtract of the subsections if any
+
+Y = [ x_dim, y_dim, z_dim, radius, x_loc, y_loc, z_loc, sphere, cube, prism, cylinder, pc1, x, y, w, h]
+
