@@ -4,6 +4,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+
+
 hidden_sizes = {"dim1": 256, "dim2": 128, "dim3": 64}
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 ##### LOAD DATA #####

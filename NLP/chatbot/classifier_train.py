@@ -8,6 +8,7 @@ from model import SequenceClassifierNN
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
+
 ##### LOAD DATA
 FILE = "datasets/intents.json"
 data = load_classifier_data(FILE)

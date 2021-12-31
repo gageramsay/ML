@@ -180,3 +180,5 @@ class GreedySearchDecoder(nn.Module):
             decoder_input = torch.unsqueeze(decoder_input, 0)
         
         return all_tokens, all_scores
+
+

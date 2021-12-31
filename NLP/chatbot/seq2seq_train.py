@@ -8,7 +8,6 @@ from model import PaddedEncoderRNN, LuongAttnDecoderRNN
 from torch.utils.tensorboard import SummaryWriter
 import sys
 import time
-
 ##### SETUP DEVICE
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 torch.cuda.current_device()

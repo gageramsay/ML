@@ -1,7 +1,6 @@
 from nlp_helpers import *
 """
 CHECKLIST:
-
 - load_classifier_data: PASS
 - classify: PASS
 - load_chatbot_data: PASS

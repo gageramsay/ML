@@ -133,7 +133,6 @@ def load_classifier_X_Y_train(data, vocab):
     PRE-CONDITIONS:
         -> Vocab must have word_to_ix, label_to_ix
     """
-
     X_train = list()
     Y_train = list()
     for user_input, label in data:
