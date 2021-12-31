@@ -16,9 +16,6 @@ import utils
 # check device
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-
-
-
 ##############################
 ########## HYPERPARAMETERS ##########
 ########################################

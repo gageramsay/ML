@@ -28,8 +28,6 @@ save_date = str(current_month)+"_"+str(current_day)+"_"+str(current_year)
 seed = 123
 torch.manual_seed(seed)
 
-
-
 ##########################################
 ########### HYPERPARAMETERS ##############
 #########################################

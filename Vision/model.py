@@ -106,10 +106,12 @@ def test_YOLOv1(S=7, B=2, C=20):
 
 
 test_YOLOv1()
-
 ##############################
 ########## OBJECT DETECTION (end) ##########
 ########################################
+
+
+
 
 
 
@@ -151,12 +153,6 @@ class LeNet5(nn.Module):
         logits = self.classifier(x)
         probs = F.softmax(logits, dim=1)
         return logits, probs
-
-
-
-
-
-
 ##############################
 ########## CLASSIFICATION (end) ##########
 ########################################
